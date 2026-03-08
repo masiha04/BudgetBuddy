@@ -151,3 +151,4 @@ The app opens at `http://localhost:3000`
 ## 📝 License
 
 MIT
+# BudgetBuddy

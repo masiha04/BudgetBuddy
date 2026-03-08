@@ -1,0 +1,139 @@
+.analytics-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.period-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.period-selector .form-select {
+  width: auto;
+}
+
+.analytics-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.analytics-stat {
+  text-align: center;
+  padding: 20px;
+}
+
+.as-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.as-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.as-value {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.analytics-cats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.top-cats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-cat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-cat-rank {
+  width: 22px;
+  height: 22px;
+  background: var(--bg-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.top-cat-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.top-cat-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.top-cat-amount {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--accent-red);
+  white-space: nowrap;
+}
+
+/* Budget bar reuse */
+.budget-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-input);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.budget-bar.mini {
+  height: 4px;
+}
+
+.budget-bar-fill {
+  height: 100%;
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+/* Export */
+.export-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.export-btns {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1100px) {
+  .analytics-summary { grid-template-columns: repeat(2, 1fr); }
+  .analytics-cats-row { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  .analytics-summary { grid-template-columns: 1fr 1fr; }
+  .analytics-cats-row { grid-template-columns: 1fr; }
+  .period-selector { flex-wrap: wrap; }
+}
